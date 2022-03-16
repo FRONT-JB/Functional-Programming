@@ -1,5 +1,7 @@
 # [함수형 프로그래밍과 JavaScript ES6+](https://www.inflearn.com/course/functional-es6)
 
+[GITHUB](https://github.com/indongyoo/functional-javascript-01)
+
 _함수형 프로그래밍 방법론_
 
 _최신 Javascript 프로토콜들의 의미와 사용법_
@@ -15,9 +17,9 @@ _비동기, 에러 핸들링 방법론_
 
 [Recap](docs/Section00/readme.md)
 
-- [ ] 평가와 일급 (03:00)
-- [ ] 일급 함수 (02:00)
-- [ ] 고차 함수 (06:00)
+- [x] 평가와 일급 (03:00)
+- [x] 일급 함수 (02:00)
+- [x] 고차 함수 (06:00)
 
 <br />
 
