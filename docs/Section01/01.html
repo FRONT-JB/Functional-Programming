@@ -1,0 +1,79 @@
+<script>
+  const log = console.log;
+</script>
+
+<script>
+  const list = [1, 2, 3];
+  const str = "abc";
+
+  for (var i = 0; i < list.length; i++) {
+    log(list[i]);
+  }
+  // 1
+  // 2
+  // 3
+  for (var i = 0; i < str.length; i++) {
+    log(str[i]);
+  }
+  // a
+  // b
+  // c
+
+  // ES6
+  for (const a of list) {
+    log(a);
+  }
+  // 1
+  // 2
+  // 3
+  for (const a of str) {
+    log(a);
+  }
+  // a
+  // b
+  // c
+</script>
+
+<script>
+  log("Arr -----------");
+  const arr = [1, 2, 3];
+  let iter1 = arr[Symbol.iterator]();
+  for (const a of iter1) log(a);
+  // Arr -----------
+  // 1
+  // 2
+  // 3
+</script>
+
+<script>
+  log("Set -----------");
+  const set = new Set([1, 2, 3]);
+  for (const a of set) log(a);
+  // Set -----------
+  // 1
+  // 2
+  // 3
+</script>
+
+<script>
+  log("Map -----------");
+  const map = new Map([
+    ["a", 1],
+    ["b", 2],
+    ["c", 3],
+  ]);
+  for (const a of map.keys()) log(a);
+  for (const a of map.values()) log(a);
+  for (const a of map.entries()) log(a);
+  // Map -----------
+  // a
+  // b
+  // c
+  // 1
+  // 2
+  // 3
+  // ['a', 1]
+  // ['b', 2]
+  // ['c', 3]
+  console.clear();
+</script>

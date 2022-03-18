@@ -4,24 +4,12 @@
 
 `for of`
 
-```js
-const list = [1, 2, 3];
-const str = "abc";
-
-for (var i = 0; i < list.length; i++) {
-  log(list[i]);
-}
-for (var i = 0; i < str.length; i++) {
-  log(str[i]);
-}
-
-// ES6
-for (const a of list) {
-  log(a);
-}
-for (const a of str) {
-  log(a);
-}
-```
-
 <br />
+
+**## 이터러블/이터레이터 프로토콜**
+
+> 이터러블: 이터레이터를 리턴하는 [Symbol.iterator]() 를 가진 값
+>
+> 이터레이터: { value, done } 객체를 리턴하는 next() 를 가진 값
+>
+> 이터러블/이터레이터 프로토콜: 이터러블을 for...of, 전개 연산자 등과 함께 동작하도록한 규약
