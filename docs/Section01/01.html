@@ -77,3 +77,51 @@
   // ['c', 3]
   console.clear();
 </script>
+
+<script>
+  const iterable = {
+    [Symbol.iterator]() {
+      let i = 3;
+      return {
+        next() {
+          return i === 0 ? { done: true } : { value: i--, done: false };
+        },
+        [Symbol.iterator]() {
+          return this;
+        },
+      };
+    },
+  };
+  let iterator = iterable[Symbol.iterator]();
+  // log(iterator.next()); // {value: 3, done: false}
+  // log(iterator.next()); // {value: 2, done: false}
+  // log(iterator.next()); // {value: 1, done: false}
+  // log(iterator.next()); // {done: false}
+
+  // for (const a of iterable) log(a);
+  // 3
+  // 2
+  // 1
+
+  // const arr2 = [1, 2, 3];
+  // const iter2 = arr2[Symbol.iterator]();
+  // log(iter2[Symbol.iterator]() == iter2);
+  // iter2.next();
+  // for (const a of iter2) log(a);
+
+  log(document.querySelectorAll("*"));
+  //  NodeList(8) [html, head, script, script, script, script, script, script]
+
+  for (const a of document.querySelectorAll("*")) log(a);
+  const all = document.querySelectorAll("*");
+  let iter3 = all[Symbol.iterator]();
+  console.log(iter3.next()); // {value: html, done: false}
+  console.log(iter3.next()); // {value: head, done: false}
+  console.log(iter3.next()); // {value: script, done: false}
+</script>
+
+<script>
+  console.clear();
+  const a = [1, 2];
+  log([...a, ...[3, 4]]); // [1, 2, 3, 4]
+</script>
